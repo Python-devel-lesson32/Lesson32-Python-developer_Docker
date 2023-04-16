@@ -16,23 +16,23 @@ from time import ctime
 
 class MyStr(str):
 
-def __new__(cls, value: str, author: str):
+	def __new__(cls, value: str, author: str):
 
-instance = super().__new__(cls, value)
+		instance = super().__new__(cls, value)
 
-instance.author = author.capitalize()
+		instance.author = author.capitalize()
 
-instance.time = ctime(time())
+		instance.time = ctime(time())
 
-return instance
+		return instance
 
 
 if __name__ == '__main__':
 
-s = MyStr('My first class MyStr', 'Alexander')
+	s = MyStr('My first class MyStr', 'Alexander')
 
-print(s)
+	print(s)
 
-print(s.author)
+	print(s.author)
 
-print(s.time)
+	print(s.time)
